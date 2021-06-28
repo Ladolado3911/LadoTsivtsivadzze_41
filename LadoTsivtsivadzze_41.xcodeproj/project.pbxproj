@@ -12,6 +12,9 @@
 		242DF822268A2EE500388891 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242DF820268A2EE500388891 /* ContentCell.swift */; };
 		242DF823268A2EE500388891 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242DF821268A2EE500388891 /* ContentCell.xib */; };
 		242DF825268A44CB00388891 /* EditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242DF824268A44CB00388891 /* EditController.swift */; };
+		242DF829268A47B600388891 /* Cell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242DF827268A47B600388891 /* Cell3.swift */; };
+		242DF82A268A47B600388891 /* Cell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242DF828268A47B600388891 /* Cell3.xib */; };
+		242DF82C268A49E900388891 /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242DF82B268A49E900388891 /* ContentController.swift */; };
 		243BD4B72689B8E8009B0FB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4B62689B8E8009B0FB8 /* AppDelegate.swift */; };
 		243BD4B92689B8E8009B0FB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4B82689B8E8009B0FB8 /* SceneDelegate.swift */; };
 		243BD4BB2689B8E8009B0FB8 /* ReminderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4BA2689B8E8009B0FB8 /* ReminderController.swift */; };
@@ -28,6 +31,9 @@
 		242DF820268A2EE500388891 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		242DF821268A2EE500388891 /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
 		242DF824268A44CB00388891 /* EditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditController.swift; sourceTree = "<group>"; };
+		242DF827268A47B600388891 /* Cell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell3.swift; sourceTree = "<group>"; };
+		242DF828268A47B600388891 /* Cell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell3.xib; sourceTree = "<group>"; };
+		242DF82B268A49E900388891 /* ContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 		243BD4B32689B8E8009B0FB8 /* LadoTsivtsivadzze_41.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadoTsivtsivadzze_41.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		243BD4B62689B8E8009B0FB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		243BD4B82689B8E8009B0FB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,15 @@
 			path = Cell2;
 			sourceTree = "<group>";
 		};
+		242DF826268A479600388891 /* Cell3 */ = {
+			isa = PBXGroup;
+			children = (
+				242DF827268A47B600388891 /* Cell3.swift */,
+				242DF828268A47B600388891 /* Cell3.xib */,
+			);
+			path = Cell3;
+			sourceTree = "<group>";
+		};
 		243BD4AA2689B8E8009B0FB8 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +103,7 @@
 		243BD4B52689B8E8009B0FB8 /* LadoTsivtsivadzze_41 */ = {
 			isa = PBXGroup;
 			children = (
+				242DF826268A479600388891 /* Cell3 */,
 				242DF81F268A2EC100388891 /* Cell2 */,
 				242DF81A268A2B7D00388891 /* Cell */,
 				243BD4CF2689BDD4009B0FB8 /* Managers */,
@@ -99,6 +115,7 @@
 				243BD4C72689B8E9009B0FB8 /* Info.plist */,
 				243BD4BF2689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld */,
 				242DF824268A44CB00388891 /* EditController.swift */,
+				242DF82B268A49E900388891 /* ContentController.swift */,
 			);
 			path = LadoTsivtsivadzze_41;
 			sourceTree = "<group>";
@@ -186,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				243BD4C62689B8E9009B0FB8 /* LaunchScreen.storyboard in Resources */,
+				242DF82A268A47B600388891 /* Cell3.xib in Resources */,
 				242DF823268A2EE500388891 /* ContentCell.xib in Resources */,
 				243BD4C32689B8E9009B0FB8 /* Assets.xcassets in Resources */,
 				243BD4BE2689B8E8009B0FB8 /* Main.storyboard in Resources */,
@@ -203,6 +221,8 @@
 				243BD4BB2689B8E8009B0FB8 /* ReminderController.swift in Sources */,
 				242DF825268A44CB00388891 /* EditController.swift in Sources */,
 				242DF822268A2EE500388891 /* ContentCell.swift in Sources */,
+				242DF82C268A49E900388891 /* ContentController.swift in Sources */,
+				242DF829268A47B600388891 /* Cell3.swift in Sources */,
 				242DF81D268A2BA100388891 /* ReminderCell.swift in Sources */,
 				243BD4D32689BDFB009B0FB8 /* FilesManager.swift in Sources */,
 				243BD4C12689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld in Sources */,

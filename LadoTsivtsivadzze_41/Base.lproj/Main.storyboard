@@ -85,6 +85,49 @@
             </objects>
             <point key="canvasLocation" x="1962" y="84"/>
         </scene>
+        <!--Content Controller-->
+        <scene sceneID="bAB-kI-RQn">
+            <objects>
+                <viewController storyboardIdentifier="ContentController" id="asl-21-cvf" customClass="ContentController" customModule="LadoTsivtsivadzze_41" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pRO-1b-xze">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kC3-Ui-h2e">
+                                <rect key="frame" x="20" y="64" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JHR-P1-9Qt">
+                                <rect key="frame" x="20" y="114" width="374" height="728"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xaP-X4-2OQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JHR-P1-9Qt" firstAttribute="top" secondItem="kC3-Ui-h2e" secondAttribute="bottom" constant="20" id="06L-uA-tNl"/>
+                            <constraint firstItem="kC3-Ui-h2e" firstAttribute="leading" secondItem="xaP-X4-2OQ" secondAttribute="leading" constant="20" id="NUk-R1-Q33"/>
+                            <constraint firstItem="xaP-X4-2OQ" firstAttribute="bottom" secondItem="JHR-P1-9Qt" secondAttribute="bottom" constant="20" id="PX1-kD-AhO"/>
+                            <constraint firstItem="xaP-X4-2OQ" firstAttribute="trailing" secondItem="JHR-P1-9Qt" secondAttribute="trailing" constant="20" id="WdG-ap-QFq"/>
+                            <constraint firstItem="JHR-P1-9Qt" firstAttribute="leading" secondItem="xaP-X4-2OQ" secondAttribute="leading" constant="20" id="XVl-fT-oYg"/>
+                            <constraint firstItem="kC3-Ui-h2e" firstAttribute="top" secondItem="xaP-X4-2OQ" secondAttribute="top" constant="20" id="c9M-2m-2KY"/>
+                            <constraint firstItem="xaP-X4-2OQ" firstAttribute="trailing" secondItem="kC3-Ui-h2e" secondAttribute="trailing" constant="20" id="egP-5V-jgJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="JHR-P1-9Qt" id="sbd-CN-hyO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCV-8G-7sI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2716" y="84"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="1dT-Xq-jTF">
             <objects>
@@ -105,6 +148,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
