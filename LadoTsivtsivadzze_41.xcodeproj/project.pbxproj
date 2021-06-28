@@ -14,6 +14,7 @@
 		243BD4C12689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4BF2689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld */; };
 		243BD4C32689B8E9009B0FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243BD4C22689B8E9009B0FB8 /* Assets.xcassets */; };
 		243BD4C62689B8E9009B0FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243BD4C42689B8E9009B0FB8 /* LaunchScreen.storyboard */; };
+		243BD4D32689BDFB009B0FB8 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4D22689BDFB009B0FB8 /* FilesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		243BD4C22689B8E9009B0FB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		243BD4C52689B8E9009B0FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		243BD4C72689B8E9009B0FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		243BD4D22689BDFB009B0FB8 /* FilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		243BD4B52689B8E8009B0FB8 /* LadoTsivtsivadzze_41 */ = {
 			isa = PBXGroup;
 			children = (
+				243BD4CF2689BDD4009B0FB8 /* Managers */,
 				243BD4CD2689B997009B0FB8 /* App */,
 				243BD4BA2689B8E8009B0FB8 /* ReminderController.swift */,
 				243BD4BC2689B8E8009B0FB8 /* Main.storyboard */,
@@ -84,6 +87,14 @@
 				243BD4C22689B8E9009B0FB8 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		243BD4CF2689BDD4009B0FB8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				243BD4D22689BDFB009B0FB8 /* FilesManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				243BD4BB2689B8E8009B0FB8 /* ReminderController.swift in Sources */,
+				243BD4D32689BDFB009B0FB8 /* FilesManager.swift in Sources */,
 				243BD4C12689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld in Sources */,
 				243BD4B72689B8E8009B0FB8 /* AppDelegate.swift in Sources */,
 				243BD4B92689B8E8009B0FB8 /* SceneDelegate.swift in Sources */,
