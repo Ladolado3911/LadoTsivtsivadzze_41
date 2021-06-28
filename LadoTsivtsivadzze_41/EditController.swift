@@ -20,8 +20,12 @@ class EditController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let categoryName3 = categoryName2 else { return }
+        categoryName.text = categoryName3
     }
     
     func configTableView() {
@@ -53,6 +57,8 @@ extension EditController: Table {
         let file = filename[indexPath.row]
         print("guard lets passed")
         vc!.contentTxt = fileManager.getContentofFileofDirectory(dirname: categoryName2, filename: file)
+        vc!.dirName = categoryName2
+        vc!.fileName = file
         self.navigationController?.pushViewController(vc!, animated: true)
     }
 }

@@ -17,7 +17,7 @@ class ReminderCell: UITableViewCell {
     
     var fileManager = FilesManager()
     
-    var contents: [String] = []
+    var titles: [String] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +28,7 @@ class ReminderCell: UITableViewCell {
         super.layoutSubviews()
         guard let category = category else { return }
         configTblView()
-        contents = fileManager.getFilesofDirectory(dirname: category) ?? [""]
+        titles = fileManager.getFilesofDirectory(dirname: category) ?? [""]
         categoryName.text = category
         tblView.reloadData()
  
@@ -46,9 +46,9 @@ class ReminderCell: UITableViewCell {
     
     func configCell(categoryName name: String) {
         categoryName.text = name
-        contents = fileManager.getFilesofDirectory(dirname: name) ?? [""]
+        titles = fileManager.getFilesofDirectory(dirname: name) ?? [""]
         //tblView.reloadData()
-        print(contents)
+        print(titles)
     }
     
     @IBAction func onAddReminder(_ sender: Any) {
@@ -78,16 +78,25 @@ class ReminderCell: UITableViewCell {
 
 extension ReminderCell: Table {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(contents.count)
-        return contents.count
+        print(titles.count)
+        return titles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContentCell") as? ContentCell
-        print(contents[indexPath.row])
+        print(titles[indexPath.row])
         //cell!.configCell(content: contents[indexPath.row])
-        cell!.content2 = contents[indexPath.row]
+        cell!.content2 = titles[indexPath.row]
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ContentController") as? ContentController
+        guard let category = category else { return }
+        vc!.contentTxt = fileManager.getContentofFileofDirectory(dirname: category, filename: titles[indexPath.row])
+        vc!.dirName = category
+        vc!.fileName = titles[indexPath.row]
+        self.rootController!.navigationController!.pushViewController(vc!, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
