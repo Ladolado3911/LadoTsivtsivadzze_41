@@ -36,7 +36,26 @@ class ReminderController: UIViewController {
     
     @IBAction func onAddButton(_ sender: Any) {
         
+        let ac = UIAlertController(title: "Category",
+                                   message: "Enter Category Name",
+                                   preferredStyle: .alert)
         
+        ac.addTextField()
+        let submitAction = UIAlertAction(title: "Add",
+                                         style: .cancel) { [weak self] action in
+            guard let self = self else { return }
+            let answer = ac.textFields![0].text
+            self.fileManager.createDirectory(name: answer!)
+            self.tblView.reloadData()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .destructive) { action in
+            
+        }
+        ac.addAction(submitAction)
+        ac.addAction(cancelAction)
+        present(ac, animated: true)
         
     }
 }

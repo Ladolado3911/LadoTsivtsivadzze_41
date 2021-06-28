@@ -51,7 +51,7 @@ class ReminderCell: UITableViewCell {
     }
     
     @IBAction func onAddReminder(_ sender: Any) {
-        
+        print("clicked")
     }
 }
 
