@@ -12,6 +12,7 @@ typealias Table = UITableViewDataSource & UITableViewDelegate
 class ReminderController: UIViewController {
     
     @IBOutlet weak var tblView: UITableView!
+    private var fileManager = FilesManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +29,22 @@ class ReminderController: UIViewController {
         tblView.dataSource = self
         tblView.delegate = self
         
+        let nib = UINib(nibName: "ReminderCell", bundle: nil)
+        tblView.register(nib, forCellReuseIdentifier: "ReminderCell")
+        
         
     }
 }
 
 extension ReminderController: Table {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        fileManager.directories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell") as? ReminderCell
+        cell!.configCell(categoryName: fileManager.directories[indexPath.row])
+        return cell!
     }
 }
 

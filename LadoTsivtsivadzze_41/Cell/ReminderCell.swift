@@ -12,6 +12,10 @@ class ReminderCell: UITableViewCell {
     @IBOutlet weak var categoryName: UILabel!
     @IBOutlet weak var tblView: UITableView!
     
+    private var fileManager = FilesManager()
+    
+    var contents: [String] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +23,7 @@ class ReminderCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        configTblView()
         
         
     }
@@ -28,11 +33,15 @@ class ReminderCell: UITableViewCell {
         tblView.delegate = self
     }
     
+    func configCell(categoryName name: String) {
+        categoryName.text = name
+        contents = fileManager.getContentsofDirectory(dirname: name) ?? [""]
+    }
 }
 
 extension ReminderCell: Table {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        contents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
