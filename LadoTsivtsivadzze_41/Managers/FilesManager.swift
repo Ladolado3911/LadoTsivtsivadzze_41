@@ -41,4 +41,13 @@ class FilesManager {
         
         try? content.write(to: txtUrl!, atomically: true, encoding: .utf8)
     }
+    
+    func getContentsofDirectory(dirname name: String) -> [String]? {
+        let dirUrl = appUrl?.appendingPathComponent("\(name)")
+        guard let content = try? fileManager.contentsOfDirectory(at: dirUrl!,
+                                                                 includingPropertiesForKeys: nil,
+                                                                 options: .skipsHiddenFiles) else { return nil }
+        
+        return content.map { try! String(contentsOf: $0, encoding: .utf8) }
+    }
 }

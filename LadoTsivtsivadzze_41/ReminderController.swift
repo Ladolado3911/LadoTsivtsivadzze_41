@@ -17,7 +17,9 @@ class ReminderController: UIViewController {
         super.viewDidLoad()
         //FilesManager().createDirectory(name: "good")
         //FilesManager().getDirUrl(dirName: "good")
-        print(FilesManager().directories)
+        //print(FilesManager().directories)
+        print(FilesManager().getContentsofDirectory(dirname: "good"))
+        print(FilesManager().getContentsofDirectory(dirname: "something"))
         //FilesManager().createReminderTxt(name: "text2", dirName: "good")
         //print(FilesManager().appUrl)
     }
