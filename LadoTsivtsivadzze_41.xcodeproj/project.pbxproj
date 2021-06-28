@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		243BD4B72689B8E8009B0FB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4B62689B8E8009B0FB8 /* AppDelegate.swift */; };
 		243BD4B92689B8E8009B0FB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4B82689B8E8009B0FB8 /* SceneDelegate.swift */; };
-		243BD4BB2689B8E8009B0FB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4BA2689B8E8009B0FB8 /* ViewController.swift */; };
+		243BD4BB2689B8E8009B0FB8 /* ReminderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4BA2689B8E8009B0FB8 /* ReminderController.swift */; };
 		243BD4BE2689B8E8009B0FB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243BD4BC2689B8E8009B0FB8 /* Main.storyboard */; };
 		243BD4C12689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4BF2689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld */; };
 		243BD4C32689B8E9009B0FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243BD4C22689B8E9009B0FB8 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		243BD4B32689B8E8009B0FB8 /* LadoTsivtsivadzze_41.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadoTsivtsivadzze_41.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		243BD4B62689B8E8009B0FB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		243BD4B82689B8E8009B0FB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		243BD4BA2689B8E8009B0FB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		243BD4BA2689B8E8009B0FB8 /* ReminderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderController.swift; sourceTree = "<group>"; };
 		243BD4BD2689B8E8009B0FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		243BD4C02689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LadoTsivtsivadzze_41.xcdatamodel; sourceTree = "<group>"; };
 		243BD4C22689B8E9009B0FB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,16 +58,32 @@
 		243BD4B52689B8E8009B0FB8 /* LadoTsivtsivadzze_41 */ = {
 			isa = PBXGroup;
 			children = (
-				243BD4B62689B8E8009B0FB8 /* AppDelegate.swift */,
-				243BD4B82689B8E8009B0FB8 /* SceneDelegate.swift */,
-				243BD4BA2689B8E8009B0FB8 /* ViewController.swift */,
+				243BD4CD2689B997009B0FB8 /* App */,
+				243BD4BA2689B8E8009B0FB8 /* ReminderController.swift */,
 				243BD4BC2689B8E8009B0FB8 /* Main.storyboard */,
-				243BD4C22689B8E9009B0FB8 /* Assets.xcassets */,
+				243BD4CE2689B9A3009B0FB8 /* Resources */,
 				243BD4C42689B8E9009B0FB8 /* LaunchScreen.storyboard */,
 				243BD4C72689B8E9009B0FB8 /* Info.plist */,
 				243BD4BF2689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld */,
 			);
 			path = LadoTsivtsivadzze_41;
+			sourceTree = "<group>";
+		};
+		243BD4CD2689B997009B0FB8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				243BD4B62689B8E8009B0FB8 /* AppDelegate.swift */,
+				243BD4B82689B8E8009B0FB8 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		243BD4CE2689B9A3009B0FB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				243BD4C22689B8E9009B0FB8 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				243BD4BB2689B8E8009B0FB8 /* ViewController.swift in Sources */,
+				243BD4BB2689B8E8009B0FB8 /* ReminderController.swift in Sources */,
 				243BD4C12689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld in Sources */,
 				243BD4B72689B8E8009B0FB8 /* AppDelegate.swift in Sources */,
 				243BD4B92689B8E8009B0FB8 /* SceneDelegate.swift in Sources */,
