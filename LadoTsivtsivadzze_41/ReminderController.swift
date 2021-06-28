@@ -17,8 +17,9 @@ class ReminderController: UIViewController {
         super.viewDidLoad()
         //FilesManager().createDirectory(name: "good")
         //FilesManager().getDirUrl(dirName: "good")
-        //FilesManager().getDirUrl(dirName: "good")
-        FilesManager().createReminderTxt(name: "text1", dirName: "good")
+        print(FilesManager().directories)
+        //FilesManager().createReminderTxt(name: "text2", dirName: "good")
+        //print(FilesManager().appUrl)
     }
     
     func configTableView() {
@@ -27,8 +28,6 @@ class ReminderController: UIViewController {
         
         
     }
-
-
 }
 
 extension ReminderController: Table {

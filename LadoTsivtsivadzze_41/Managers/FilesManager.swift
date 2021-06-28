@@ -19,6 +19,13 @@ class FilesManager {
                         create: false)
     }
     
+    var directories: [String] {
+        guard let content = try? fileManager.contentsOfDirectory(at: appUrl!,
+                                                      includingPropertiesForKeys: nil,
+                                                      options: .skipsHiddenFiles) else { return [""] }
+        return content.map { $0.lastPathComponent }
+    }
+    
     func createDirectory(name dirName: String) {
         let dirUrl = appUrl?.appendingPathComponent("\(dirName)")
         try? fileManager.createDirectory(at: dirUrl!,
