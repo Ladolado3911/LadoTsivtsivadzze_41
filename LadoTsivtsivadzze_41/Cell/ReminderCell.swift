@@ -31,6 +31,9 @@ class ReminderCell: UITableViewCell {
     func configTblView() {
         tblView.dataSource = self
         tblView.delegate = self
+        
+        let nib = UINib(nibName: "ContentCell", bundle: nil)
+        tblView.register(nib, forCellReuseIdentifier: "ContentCell")
     }
     
     func configCell(categoryName name: String) {
@@ -45,6 +48,8 @@ extension ReminderCell: Table {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContentCell") as? ContentCell
+        cell!.configCell(content: contents[indexPath.row])
+        return cell!
     }
 }
