@@ -45,6 +45,46 @@
             </objects>
             <point key="canvasLocation" x="1015.9420289855074" y="83.705357142857139"/>
         </scene>
+        <!--Edit Controller-->
+        <scene sceneID="7ab-Jn-ei1">
+            <objects>
+                <viewController storyboardIdentifier="EditController" id="hI7-gq-OxA" customClass="EditController" customModule="LadoTsivtsivadzze_41" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fzb-gv-gUC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP5-bp-fD1">
+                                <rect key="frame" x="20" y="64" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="37i-vj-Zkt">
+                                <rect key="frame" x="20" y="114" width="374" height="728"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="chv-oK-MWn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oP5-bp-fD1" firstAttribute="top" secondItem="chv-oK-MWn" secondAttribute="top" constant="20" id="4x2-a5-mFH"/>
+                            <constraint firstItem="chv-oK-MWn" firstAttribute="trailing" secondItem="oP5-bp-fD1" secondAttribute="trailing" constant="20" id="N1M-My-cRZ"/>
+                            <constraint firstItem="37i-vj-Zkt" firstAttribute="leading" secondItem="chv-oK-MWn" secondAttribute="leading" constant="20" id="gCM-8F-Jpn"/>
+                            <constraint firstItem="oP5-bp-fD1" firstAttribute="leading" secondItem="chv-oK-MWn" secondAttribute="leading" constant="20" id="iC0-PM-MUz"/>
+                            <constraint firstItem="chv-oK-MWn" firstAttribute="trailing" secondItem="37i-vj-Zkt" secondAttribute="trailing" constant="20" id="lE4-3Y-buT"/>
+                            <constraint firstItem="chv-oK-MWn" firstAttribute="bottom" secondItem="37i-vj-Zkt" secondAttribute="bottom" constant="20" id="vOO-0Z-N1N"/>
+                            <constraint firstItem="37i-vj-Zkt" firstAttribute="top" secondItem="oP5-bp-fD1" secondAttribute="bottom" constant="20" id="zus-Rv-diV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categoryName" destination="oP5-bp-fD1" id="EUd-nZ-2sY"/>
+                        <outlet property="tblView" destination="37i-vj-Zkt" id="0Y7-rO-FmW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QoG-Tq-oo3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962" y="84"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="1dT-Xq-jTF">
             <objects>

@@ -73,6 +73,12 @@ extension ReminderController: Table {
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EditController") as? EditController
+        vc!.categoryName2 = fileManager.directories[indexPath.row]
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         250
     }
