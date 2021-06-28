@@ -69,6 +69,7 @@ extension ReminderController: Table {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell") as? ReminderCell
         //cell!.configCell(categoryName: fileManager.directories[indexPath.row])
         cell!.category = fileManager.directories[indexPath.row]
+        cell!.rootController = self
         return cell!
     }
     

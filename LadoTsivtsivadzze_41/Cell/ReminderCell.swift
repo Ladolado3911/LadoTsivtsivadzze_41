@@ -13,6 +13,7 @@ class ReminderCell: UITableViewCell {
     @IBOutlet weak var tblView: UITableView!
     
     var category: String?
+    var rootController: ReminderController?
     
     var fileManager = FilesManager()
     
@@ -51,7 +52,27 @@ class ReminderCell: UITableViewCell {
     }
     
     @IBAction func onAddReminder(_ sender: Any) {
-        print("clicked")
+        let ac = UIAlertController(title: "Reminder",
+                                   message: "Enter Reminder",
+                                   preferredStyle: .alert)
+        
+        ac.addTextField()
+        let submitAction = UIAlertAction(title: "Enter",
+                                         style: .cancel) { [weak self] action in
+            guard let self = self else { return }
+            let answer = ac.textFields![0].text
+            self.fileManager.createReminderTxt(name: answer ?? "", dirName: self.category!)
+            self.tblView.reloadData()
+            self.rootController!.tblView.reloadData()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .destructive) { action in
+            
+        }
+        ac.addAction(submitAction)
+        ac.addAction(cancelAction)
+        self.rootController!.present(ac, animated: true)
     }
 }
 
