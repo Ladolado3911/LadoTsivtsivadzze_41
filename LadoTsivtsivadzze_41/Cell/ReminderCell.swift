@@ -28,7 +28,7 @@ class ReminderCell: UITableViewCell {
         super.layoutSubviews()
         guard let category = category else { return }
         configTblView()
-        contents = fileManager.getContentsofDirectory(dirname: category) ?? [""]
+        contents = fileManager.getFilesofDirectory(dirname: category) ?? [""]
         categoryName.text = category
         tblView.reloadData()
  
@@ -46,7 +46,7 @@ class ReminderCell: UITableViewCell {
     
     func configCell(categoryName name: String) {
         categoryName.text = name
-        contents = fileManager.getContentsofDirectory(dirname: name) ?? [""]
+        contents = fileManager.getFilesofDirectory(dirname: name) ?? [""]
         //tblView.reloadData()
         print(contents)
     }

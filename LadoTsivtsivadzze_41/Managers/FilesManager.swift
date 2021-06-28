@@ -42,12 +42,31 @@ class FilesManager {
         try? content.write(to: txtUrl!, atomically: true, encoding: .utf8)
     }
     
-    func getContentsofDirectory(dirname name: String) -> [String]? {
+    func getFilesofDirectory(dirname name: String) -> [String]? {
+        let dirUrl = appUrl?.appendingPathComponent("\(name)")
+        guard let content = try? fileManager.contentsOfDirectory(at: dirUrl!,
+                                                                 includingPropertiesForKeys: nil,
+                                                                 options: .skipsHiddenFiles) else { return nil}
+        return content.map { $0.lastPathComponent }
+    }
+    
+    func getContentofFileofDirectory(dirname name: String, filename name2: String) -> String? {
         let dirUrl = appUrl?.appendingPathComponent("\(name)")
         guard let content = try? fileManager.contentsOfDirectory(at: dirUrl!,
                                                                  includingPropertiesForKeys: nil,
                                                                  options: .skipsHiddenFiles) else { return nil }
         
-        return content.map { try! String(contentsOf: $0, encoding: .utf8) }
+        let item = content.filter { $0.lastPathComponent == name2 }[0]
+        let content2 = try! String(contentsOf: item, encoding: .utf8)
+        return content2
+    }
+    
+    func updateFile(using text: String, dirname name1: String, filename name2: String) {
+        let dirUrl = appUrl?.appendingPathComponent("\(name1)")
+        let fileUrl = dirUrl?.appendingPathComponent("\(name2)")
+        
+        guard let fileUrl = fileUrl else { return }
+        
+        try? text.write(to: fileUrl, atomically: true, encoding: .utf8)
     }
 }
