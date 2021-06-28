@@ -16,6 +16,7 @@ class ReminderController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configTableView()
         //FilesManager().createDirectory(name: "good")
         //FilesManager().getDirUrl(dirName: "good")
         //print(FilesManager().directories)
@@ -31,6 +32,10 @@ class ReminderController: UIViewController {
         
         let nib = UINib(nibName: "ReminderCell", bundle: nil)
         tblView.register(nib, forCellReuseIdentifier: "ReminderCell")
+    }
+    
+    @IBAction func onAddButton(_ sender: Any) {
+        
         
         
     }
@@ -43,8 +48,13 @@ extension ReminderController: Table {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell") as? ReminderCell
-        cell!.configCell(categoryName: fileManager.directories[indexPath.row])
+        //cell!.configCell(categoryName: fileManager.directories[indexPath.row])
+        cell!.category = fileManager.directories[indexPath.row]
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        250
     }
 }
 

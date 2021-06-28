@@ -9,7 +9,10 @@ import UIKit
 
 class ContentCell: UITableViewCell {
     
-    @IBOutlet weak var content: UITextView!
+ 
+    @IBOutlet weak var content: UILabel!
+    
+    var content2: String?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,9 +21,13 @@ class ContentCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        guard let content2 = content2 else { return }
+        print("testing guard let")
+        content.text = content2
     }
     
     func configCell(content text: String) {
+        print("here")
         content.text = text
     }
 }

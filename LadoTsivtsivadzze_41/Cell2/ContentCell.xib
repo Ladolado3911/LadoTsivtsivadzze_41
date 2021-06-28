@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,34 +16,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="420" height="159"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="content view" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b0I-Tz-wta">
-                        <rect key="frame" x="20" y="20" width="380" height="119"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="textColor" systemColor="labelColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hV-Ba-f68">
+                        <rect key="frame" x="20" y="0.0" width="400" height="159"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="b0I-Tz-wta" secondAttribute="bottom" constant="20" id="49l-Ip-sN8"/>
-                    <constraint firstItem="b0I-Tz-wta" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CSQ-Gt-BaJ"/>
-                    <constraint firstAttribute="trailing" secondItem="b0I-Tz-wta" secondAttribute="trailing" constant="20" id="NCu-P1-WQN"/>
-                    <constraint firstItem="b0I-Tz-wta" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="dL5-LQ-KO8"/>
+                    <constraint firstAttribute="bottom" secondItem="1hV-Ba-f68" secondAttribute="bottom" id="UiP-Yv-yPh"/>
+                    <constraint firstItem="1hV-Ba-f68" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sLs-r7-FSb"/>
+                    <constraint firstItem="1hV-Ba-f68" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="xPv-A0-izi"/>
+                    <constraint firstAttribute="trailing" secondItem="1hV-Ba-f68" secondAttribute="trailing" id="y1V-z0-kot"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="content" destination="b0I-Tz-wta" id="Hxy-Lf-EAK"/>
+                <outlet property="content" destination="1hV-Ba-f68" id="jCF-H6-gns"/>
             </connections>
             <point key="canvasLocation" x="178.2608695652174" y="114.17410714285714"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

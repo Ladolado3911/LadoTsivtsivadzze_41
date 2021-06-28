@@ -23,17 +23,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lAV-rx-c5a">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lAV-rx-c5a">
                         <rect key="frame" x="20" y="61" width="519" height="157"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </tableView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peM-JM-x1w">
+                        <rect key="frame" x="446" y="20" width="93" height="30"/>
+                        <state key="normal" title="Add reminder"/>
+                        <connections>
+                            <action selector="onAddReminder:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0cg-Cm-fgk"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="IGo-9S-Frv" secondAttribute="trailing" constant="20" id="9xD-ZF-GWO"/>
                     <constraint firstAttribute="bottom" secondItem="lAV-rx-c5a" secondAttribute="bottom" constant="20" id="DmA-gp-8Cv"/>
                     <constraint firstItem="lAV-rx-c5a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="EqM-F4-uia"/>
                     <constraint firstItem="IGo-9S-Frv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Kr4-f3-90W"/>
+                    <constraint firstItem="peM-JM-x1w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="aga-0t-aY3"/>
                     <constraint firstAttribute="trailing" secondItem="lAV-rx-c5a" secondAttribute="trailing" constant="20" id="fyZ-rv-nxi"/>
+                    <constraint firstAttribute="trailing" secondItem="peM-JM-x1w" secondAttribute="trailing" constant="20" id="rn7-To-0u0"/>
                     <constraint firstItem="lAV-rx-c5a" firstAttribute="top" secondItem="IGo-9S-Frv" secondAttribute="bottom" constant="20" id="upd-Ee-n6H"/>
                     <constraint firstItem="IGo-9S-Frv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="whR-lO-2xQ"/>
                 </constraints>
@@ -47,8 +56,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

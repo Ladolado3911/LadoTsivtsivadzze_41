@@ -31,7 +31,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reminder" id="uaC-rW-vvX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rfT-RC-e6y"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rfT-RC-e6y">
+                            <connections>
+                                <action selector="onAddButton:" destination="BYZ-38-t0r" id="UUO-Kb-ecT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tblView" destination="xgL-Cm-7Dw" id="LQM-Qy-r5A"/>
