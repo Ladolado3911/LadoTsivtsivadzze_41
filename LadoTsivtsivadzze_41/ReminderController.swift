@@ -15,7 +15,10 @@ class ReminderController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        //FilesManager().createDirectory(name: "good")
+        //FilesManager().getDirUrl(dirName: "good")
+        //FilesManager().getDirUrl(dirName: "good")
+        FilesManager().createReminderTxt(name: "text1", dirName: "good")
     }
     
     func configTableView() {

@@ -24,6 +24,14 @@ class FilesManager {
         try? fileManager.createDirectory(at: dirUrl!,
                                         withIntermediateDirectories: true,
                                         attributes: nil)
-        print(dirUrl)
+        print(type(of: dirUrl))
+    }
+    
+    func createReminderTxt(name txtName: String, dirName name: String) {
+        let dirUrl = appUrl?.appendingPathComponent("\(name)")
+        let txtUrl = dirUrl?.appendingPathComponent("\(txtName).txt")
+        let content = txtName
+        
+        try? content.write(to: txtUrl!, atomically: true, encoding: .utf8)
     }
 }
