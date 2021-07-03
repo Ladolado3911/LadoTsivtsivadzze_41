@@ -78,13 +78,13 @@ class ReminderCell: UITableViewCell {
 
 extension ReminderCell: Table {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(titles.count)
+        //print(titles.count)
         return titles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContentCell") as? ContentCell
-        print(titles[indexPath.row])
+        //print(titles[indexPath.row])
         //cell!.configCell(content: contents[indexPath.row])
         cell!.content2 = titles[indexPath.row]
         return cell!

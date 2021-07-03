@@ -22,12 +22,12 @@ class ContentCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         guard let content2 = content2 else { return }
-        print("testing guard let")
+        //print("testing guard let")
         content.text = content2
     }
     
     func configCell(content text: String) {
-        print("here")
+        //print("here")
         content.text = text
     }
 }

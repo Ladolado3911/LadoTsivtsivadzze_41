@@ -31,7 +31,7 @@ class FilesManager {
         try? fileManager.createDirectory(at: dirUrl!,
                                         withIntermediateDirectories: true,
                                         attributes: nil)
-        print(type(of: dirUrl))
+        //print(type(of: dirUrl))
     }
     
     func createReminderTxt(name txtName: String, dirName name: String) {
@@ -46,8 +46,16 @@ class FilesManager {
         let dirUrl = appUrl?.appendingPathComponent("\(name)")
         guard let content = try? fileManager.contentsOfDirectory(at: dirUrl!,
                                                                  includingPropertiesForKeys: nil,
-                                                                 options: .skipsHiddenFiles) else { return nil}
-        return content.map { $0.lastPathComponent }
+                                                                 options: .skipsHiddenFiles) else { return nil }
+        let content2 = content.map { $0.lastPathComponent }
+        var result = [String]()
+        content2.forEach { str in
+            var tempStr = str
+            tempStr.removeLast(4)
+            print(tempStr)
+            result.append(tempStr)
+        }
+        return result
     }
     
     func getContentofFileofDirectory(dirname name: String, filename name2: String) -> String? {
